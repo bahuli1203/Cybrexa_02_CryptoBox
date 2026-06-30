@@ -1,0 +1,92 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background-color: #070C1F;
+    color: #FFFFFF;
+    font-family: 'Inter', sans-serif;
+  }
+}
+
+/* Custom glow utilities */
+.cyber-glow {
+  box-shadow: 0 0 15px rgba(0, 229, 255, 0.35);
+  border-color: rgba(0, 229, 255, 0.35);
+}
+
+.cyber-glow-hover:hover {
+  box-shadow: 0 0 20px rgba(0, 229, 255, 0.5);
+  border-color: rgba(0, 229, 255, 0.6);
+}
+
+.text-cyber-glow {
+  text-shadow: 0 0 8px rgba(0, 229, 255, 0.6);
+}
+
+.text-cyber-glow-heavy {
+  text-shadow: 0 0 15px rgba(0, 229, 255, 0.8), 0 0 30px rgba(0, 229, 255, 0.4);
+}
+
+/* Glassmorphism custom styling */
+.cyber-glass {
+  background: rgba(16, 23, 48, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(0, 229, 255, 0.15);
+}
+
+.cyber-glass-glow {
+  background: rgba(16, 23, 48, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(0, 229, 255, 0.25);
+  box-shadow: 0 0 25px rgba(0, 229, 255, 0.05);
+}
+
+/* Custom animated border */
+@keyframes border-glow-flow {
+  0%, 100% {
+    border-color: rgba(0, 229, 255, 0.25);
+    box-shadow: 0 0 10px rgba(0, 229, 255, 0.05);
+  }
+  50% {
+    border-color: rgba(0, 229, 255, 0.6);
+    box-shadow: 0 0 20px rgba(0, 229, 255, 0.2);
+  }
+}
+
+.animated-border-glow {
+  animation: border-glow-flow 4s infinite ease-in-out;
+}
+
+/* Grid background decoration */
+.bg-cyber-grid {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(0, 229, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 229, 255, 0.03) 1px, transparent 1px);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #070C1F;
+}
+::-webkit-scrollbar-thumb {
+  background: #101730;
+  border: 1px solid rgba(0, 229, 255, 0.3);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #00E5FF;
+}
+
+/* Accent neon cursor indicator styling for buttons */
+.cursor-cyber-pointer {
+  cursor: pointer;
+}
